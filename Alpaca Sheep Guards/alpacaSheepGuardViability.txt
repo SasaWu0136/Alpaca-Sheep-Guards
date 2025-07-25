@@ -1,0 +1,9 @@
+=== Alpaca Sheep Guard Simulation Report ===
+Farm name: sasasa
+Number of sheep: 1
+Number of lamb: 1
+Recommended level of protection: 0 alpaca
+Protection cost: $50.00
+Average predicted number of animal: 0.20
+Most troublesome predators:
+ dingo, kill average: 0.2

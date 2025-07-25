@@ -1,0 +1,43 @@
+Create a Farm object with the default constructor.
+
+Create a Farm object with the non-default constructor:
+
+    with valid field values
+
+    with invalid field values
+
+Test all get methods:
+
+    Test getName()
+
+    Test getState()
+
+    Test getNumSheeps()
+
+    Test getNumLambs()
+
+Test all set methods:
+
+Test setName()
+
+    with valid field values
+
+    with invalid field values
+
+Test setState()
+
+    with valid field values
+
+    with invalid field values
+
+Test setNumSheeps()
+
+    with valid field values
+
+    with invalid field values
+
+Test setNumLambs()
+
+    with valid field values
+
+    with invalid field values
