@@ -7,7 +7,7 @@ Run `sh scripts/web.sh` from the project root, then open http://127.0.0.1:8080.
 - `src/FarmWebServer.java`: JDK HTTP server, query validation, JSON serialization and static serving.
 - `src/Simulation.java`: existing Java model; defensive snapshots expose trial costs and counts.
 - `web/index.html`, `web/style.css`, `web/app.js`: buildless responsive UI, Canvas sprites and browser report export.
-- `web/assets/farm.png`: generated pixel-art farm background, based on the approved mockup.
+- `web/assets/farm.png`: generated pixel-art farm background.
 
 Each request creates its own farm and state, runs the existing model for guard counts 0–2 with `seed + guard count`, and returns all summary and per-trial values. The web adapter does not overwrite the CLI's report. It does not require a database, external API, npm package or Java framework.
 
@@ -19,8 +19,8 @@ Animation traverses 10 independent trials. A fresh flock appears at each trial; 
 
 ## Verification
 
-`sh scripts/test.sh` compiles for Java 17, runs the original regression suite, checks the web adapter, then verifies the seed-42 CLI report. Web adapter tests run without binding a network port. Actual browser and HTTP checks require the local server to be allowed by the host environment.
+`sh scripts/test.sh` compiles for Java 17, runs the original regression suite, checks the web adapter, then verifies the seed-42 CLI report. Web adapter tests run without binding a network port. Browser and end-to-end HTTP checks require a running local server.
 
 ## Hosting
 
-This edition uses a Java backend and is intended to run locally from the existing repository. Static-only hosts cannot execute the Java API. A public demo needs Java-capable hosting or a separately validated portable model; neither is included in this local update.
+The application runs locally with a Java backend. Static-only hosts cannot execute the Java API. A public deployment requires Java-capable hosting or a separately validated portable implementation of the model.

@@ -7,6 +7,7 @@
 3. `Farm`, `State`, `Predator` and the `Animal` subclasses model the domain.
 4. `Simulation` creates a fresh population for each of 10 trials per strategy.
 5. The CLI compares mean costs and `FileIO` exports the selected strategy.
+6. `FarmWebServer` exposes the same engine to the browser, including trial snapshots for charts and playback.
 
 ## Assumptions inherited from the original
 
@@ -37,7 +38,7 @@ The default is 10 trials for each guard count. An optional seed produces indepen
 
 The recommendation is the strategy with the smallest observed sample mean; ties select the lower guard count. Ten trials provide a demonstration, not a reliable estimate of uncertainty. There are no confidence intervals or proven savings claims. Predator ordering affects attribution; fixed protection and population limits simplify the real system.
 
-## Changes in this portfolio edition
+## Implementation history
 
 - Repaired the malformed `Animal.setKilledBy` body and unresolved animal-type constants.
 - Corrected the cause-of-death constructor to match its documented dead status.
@@ -46,7 +47,8 @@ The recommendation is the strategy with the smallest observed sample mean; ties 
 - Made invalid/missing predator data and report write failures explicit.
 - Organized runnable code, data, tests, generated output and the original snapshot.
 - Added regression checks, a reproducible CLI demo and Java 17 CI.
+- Added the Java HTTP adapter, browser comparison interface and trial playback.
 
 ## Remaining technical debt
 
-Domain constructors and setters do not consistently enforce invariants; interactive validation remains the principal guard for farms. Predator parsing validates probability values and field count but does not enforce a complete unique set of state rows. Statistics use mutable arrays and predator state. Trial count and cost constants remain hard-coded. Export contains only the selected strategy and does not yet include the seed or full input provenance.
+Domain constructors and setters do not consistently enforce invariants; interactive validation remains the principal guard for farms. Predator parsing validates probability values and field count but does not enforce a complete unique set of state rows. Statistics use mutable arrays and predator state. Trial count and cost constants remain hard-coded. The CLI export contains only the selected strategy and does not include the seed. Browser exports include the completed farm inputs, seed, all three strategy summaries and trial costs.
