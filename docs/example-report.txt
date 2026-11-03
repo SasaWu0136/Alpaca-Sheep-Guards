@@ -1,0 +1,12 @@
+=== Alpaca Sheep Guard Simulation Report ===
+Educational model; assumptions are not field-validated.
+Farm name: Sample Farm
+Number of sheep: 80
+Number of lamb: 20
+Recommended level of protection: 2 alpaca
+Estimated total cost: $2722.28
+Average animals lost: 4.10
+Most troublesome predators:
+ dingo, kill average: 1.5
+ feral pig, kill average: 0.6
+ fox, kill average: 2.0
