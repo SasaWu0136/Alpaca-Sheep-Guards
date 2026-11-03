@@ -110,6 +110,17 @@ These are **educational assumptions inherited from the original project**, with 
 
 Animation uses actual per-trial loss counts. Positions, movement, the decorative fox and timing are illustrative. Each trial begins with a fresh flock; playback does not represent consecutive days or a time-ordered attack log.
 
+## Java update tool
+
+A standalone Java updater is included in `tools/AlpacaGuardWebUpdate.java`. It runs with JDK 17+ and does not require Python or external libraries.
+
+```sh
+java tools/AlpacaGuardWebUpdate.java --check
+java tools/AlpacaGuardWebUpdate.java
+```
+
+The updater targets the earlier portfolio edition, verifies files before writing, preserves custom changes, and backs up replaced files. An existing matching web installation is detected without overwriting current documentation. It does not commit or push Git changes. See [updater details](tools/README.md).
+
 ## Check the project
 
 ```sh
