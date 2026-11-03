@@ -129,7 +129,7 @@ GitHub Actions runs the same command on Java 17 for pushes and pull requests. Br
 | `data/` | Supplied state and predator factors. |
 | `scripts/` | Web, CLI and test entry points. |
 | `tests/` | Simulation and web adapter checks. |
-| `docs/` | Model, architecture, Chinese introduction and portfolio case study. |
+| `docs/` | Model, architecture, Chinese introduction and project case study. |
 | `archive/` | Original source and assessment materials preserved for provenance. |
 | `build/`, `output/` | Generated files, excluded from version control. |
 
@@ -147,4 +147,4 @@ These are planned improvements. The current application runs locally with suppli
 
 Original Java author: **Hsin-i Wu**. Author attribution is retained in the source and archived snapshot. The pixel-art landscape was generated with AI for this interface; animal sprites and controls are rendered in code.
 
-[中文介紹](docs/PROJECT_ZH.md) · [Portfolio case study](docs/PORTFOLIO.md) · [Model details](docs/MODEL.md) · [Web architecture](docs/WEB.md)
+[中文介紹](docs/PROJECT_ZH.md) · [Project case study](docs/PORTFOLIO.md) · [Model details](docs/MODEL.md) · [Web architecture](docs/WEB.md)
